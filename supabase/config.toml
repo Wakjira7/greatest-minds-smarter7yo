@@ -1,0 +1,4 @@
+project_id = "persona-advisor-app"
+
+[functions.persona-chat]
+verify_jwt = false

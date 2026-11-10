@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+dist/
+web-build/
+*.log
+*.aab
+*.apk
+.git/
+.agents/
+AGENTS.md
+GEMINI.md
+assets/playstore/
+package-lock.json

@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Talk to the Greatest Minds",
+    "slug": "talk-to-the-greatest-minds",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "personaadvisor",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#090D16"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wakjira.greatestminds",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.wakjira.greatestminds",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#090D16"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "androidBuildConfig": {
+        "compileSdkVersion": 36,
+        "targetSdkVersion": 36,
+        "minSdkVersion": 24
+      }
+    },
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

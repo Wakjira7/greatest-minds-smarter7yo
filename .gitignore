@@ -1,0 +1,58 @@
+# Dependencies & Expo / Metro caches
+node_modules/
+.expo/
+dist/
+web-build/
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Android & Gradle build outputs
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+**/local.properties
+*.iml
+.idea/
+.cxx/
+.externalNativeBuild/
+
+# iOS build outputs
+ios/Pods/
+ios/build/
+
+# Signing credentials, keystores & release binaries (NEVER COMMIT)
+.credentials/
+keystore/
+*.jks
+*.keystore
+!**/debug.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+keystore.properties
+**/keystore.properties
+*.aab
+*.apk
+
+# Environment & local agent / tool configs (NEVER COMMIT)
+.env
+.env.*
+!.env.example
+.agents/
+**/.agents/
+AGENTS.md
+**/AGENTS.md
+GEMINI.md
+**/GEMINI.md
+.mcp.json
+ghibli_shorts/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+*.orig.*
+*.log
