@@ -1,0 +1,34 @@
+name: Bug Report
+description: Report a gameplay, AI persona chat, or localization issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: app_variant
+    attributes:
+      label: App Variant
+      options:
+        - Smarter Than a 7-Year-Old IQ (com.wakjira.smarter7yo)
+        - Greatest Minds: Stoic AI Chat (com.wakjira.greatestminds)
+        - Portfolio Web / Studio Mode
+    validations:
+      required: true
+  - type: input
+    id: locale
+    attributes:
+      label: Selected Language & Device
+      placeholder: "e.g. Deutsch (de) — Pixel 8 Android 16"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. Actual Behavior
+    validations:
+      required: true

@@ -1,0 +1,35 @@
+name: CI — TypeScript & Variant Audit
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  typecheck-and-audit:
+    name: TypeScript Strict Check & Security Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Verify no signing credentials or release binaries tracked
+        run: |
+          if git ls-files | grep -E '\.(aab|apk|jks)$|keystore\.properties$|^\.env$'; then
+            echo "Error: Release binaries, keystores, or .env files must not be tracked in Git."
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Run strict TypeScript check (tsc --noEmit)
+        run: npm run typecheck

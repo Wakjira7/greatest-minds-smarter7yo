@@ -1,0 +1,21 @@
+name: Feature / Translation Suggestion
+description: Suggest a new trivia category, historical mentor, or 9-language translation improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: target
+    attributes:
+      label: Target App
+      options:
+        - Smarter Than a 7-Year-Old IQ
+        - Greatest Minds: Stoic AI Chat
+        - Both / Shared Core
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Proposed Enhancement
+    validations:
+      required: true
